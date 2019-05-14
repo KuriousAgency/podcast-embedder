@@ -1,0 +1,23 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Podcast Embedder plugin for Craft CMS 3.x
+ *
+ * Podcast Field Input
+ *
+ * @author    Kurious Agency
+ * @copyright Copyright (c) 2019 Kurious Agency
+ * @link      https://kurious.agency
+ * @package   PodcastEmbedder
+ * @since     0.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% if value %}
+	{% set embed = craft.podcastEmbedder.embed(value, {skin:1}) %}
+    {% if embed | length %}
+		{{ embed }}
+	{% endif %}
+{% endif %}

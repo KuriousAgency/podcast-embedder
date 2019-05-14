@@ -1,0 +1,53 @@
+/**
+ * Podcast Embedder plugin for Craft CMS
+ *
+ * Podcast Field CSS
+ *
+ * @author    Kurious Agency
+ * @copyright Copyright (c) 2019 Kurious Agency
+ * @link      https://kurious.agency
+ * @package   PodcastEmbedder
+ * @since     0.0.1
+ */
+div.podcast-embedder-container {
+	padding: 14px;
+	border: 1px solid #e3e5e8;
+	background: #fafafa;
+	border-radius: 4px;
+	margin-top: 4px;
+}
+div.podcast-embedder-previewContainer {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 0;
+	overflow: hidden;
+}
+div.podcast-embedder-previewContainer::before {
+	display: block;
+	content: '';
+	padding-top: 100px;
+}
+div.podcast-embedder-previewContainer iframe {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+div.podcast-embedder-previewContainer.is-loading {
+	opacity: 0.5;
+}
+
+.podcast-embedder-tableAttributeHtml {
+	display: inline-block;
+}
+.podcast-embedder-tableAttributeHtml-thumb {
+	margin-right: 8px;
+	height: 35px;
+}
+.podcast-embedder-tableAttributeHtml-thumb img {
+	height: 100%;
+}

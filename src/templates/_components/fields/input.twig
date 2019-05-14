@@ -1,0 +1,40 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Podcast Embedder plugin for Craft CMS 3.x
+ *
+ * Podcast Field Input
+ *
+ * @author    Kurious Agency
+ * @copyright Copyright (c) 2019 Kurious Agency
+ * @link      https://kurious.agency
+ * @package   PodcastEmbedder
+ * @since     0.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+<div class="podcast-embedder-container">
+
+    <div class="podcast-embedder-urlContainer flex">
+        <div class="texticon search icon clearable flex-grow">
+            {{ forms.text({
+                id: name,
+                name: name,
+                type: 'url',
+                placeholder: 'Only Podbean and Libsyn supported.',
+                value: value ? value,
+                class: 'podcast-embedder-url'
+            }) }}
+        </div>
+    </div>
+
+    <div class="podcast-embedder-previewContainer">
+        {% include 'podcast-embedder/_components/fields/inputEmbed.twig' with {
+            name: name,
+            value: value
+        } only %}
+    </div>
+
+</div>
