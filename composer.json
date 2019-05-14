@@ -1,44 +1,42 @@
 {
-	"name": "kuriousagency/podcast-embedder",
-	"description": "Podcast fieldtype",
-	"type": "craft-plugin",
-	"version": "0.0.1",
-	"keywords": [
-		"craft",
-		"cms",
-		"craftcms",
-		"craft-plugin",
-		"podcast embedder"
-	],
-	"support": {
-		"docs": "???",
-		"issues": "???"
-	},
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Kurious Agency",
-			"homepage": "https://kurious.agency"
-		}
-	],
-	"require": {
-		"craftcms/cms": "^3.0.0-RC1",
-		"embed/embed": "^3.3"
-	},
-	"autoload": {
-		"psr-4": {
-			"kuriousagency\\podcastembedder\\": "src/"
-		}
-	},
-	"extra": {
-		"name": "Podcast Embedder",
-		"handle": "podcast-embedder",
-		"hasCpSettings": false,
-		"hasCpSection": false,
-		"changelogUrl": "???",
-		"components": {
-			"podcastEmbedderService": "kuriousagency\\podcastembedder\\services\\PodcastEmbedderService"
-		},
-		"class": "kuriousagency\\podcastembedder\\PodcastEmbedder"
-	}
+    "name": "kuriousagency/podcast-embedder",
+    "description": "Podcast fieldtype",
+    "type": "craft-plugin",
+    "version": "0.0.2",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "podcast embedder"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [{
+        "name": "Kurious Agency",
+        "homepage": "https://kurious.agency"
+    }],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "embed/embed": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "kuriousagency\\podcastembedder\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Podcast Embedder",
+        "handle": "podcast-embedder",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "components": {
+            "podcastEmbedderService": "kuriousagency\\podcastembedder\\services\\PodcastEmbedderService"
+        },
+        "class": "kuriousagency\\podcastembedder\\PodcastEmbedder"
+    }
 }
