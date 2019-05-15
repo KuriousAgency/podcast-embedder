@@ -101,6 +101,7 @@ class PodcastEmbedderService extends Component
 		$params = array_merge([
 			'frameborder' => 0,
 			'allowTransparency' => 1,
+			'width' => '100%',
 		], $params);
 		$paramString = '';
 		foreach ($params as $key => $param)
