@@ -2,7 +2,7 @@
 	"name": "kuriousagency/podcast-embedder",
 	"description": "Podcast fieldtype",
 	"type": "craft-plugin",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"keywords": [
 		"craft",
 		"cms",
@@ -10,10 +10,6 @@
 		"craft-plugin",
 		"podcast embedder"
 	],
-	"support": {
-		"docs": "???",
-		"issues": "???"
-	},
 	"license": "MIT",
 	"authors": [
 		{
@@ -35,7 +31,6 @@
 		"handle": "podcast-embedder",
 		"hasCpSettings": false,
 		"hasCpSection": false,
-		"changelogUrl": "???",
 		"components": {
 			"podcastEmbedderService": "kuriousagency\\podcastembedder\\services\\PodcastEmbedderService"
 		},

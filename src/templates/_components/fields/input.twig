@@ -23,12 +23,13 @@
                 id: name,
                 name: name,
                 type: 'url',
-                placeholder: 'Only Podbean and Libsyn supported.',
+                placeholder: 'Podbean share url or Libsyn oembed url',
                 value: value ? value,
                 class: 'podcast-embedder-url'
             }) }}
         </div>
     </div>
+	{# <div class="instructions"><p>Podbean share url or Libsyn oembed url</p></div> #}
 
     <div class="podcast-embedder-previewContainer">
         {% include 'podcast-embedder/_components/fields/inputEmbed.twig' with {

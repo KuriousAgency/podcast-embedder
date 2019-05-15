@@ -16,6 +16,10 @@ div.podcast-embedder-container {
 	border-radius: 4px;
 	margin-top: 4px;
 }
+div.podcast-embedder-container .instructions {
+	color: #8f98a3;
+	margin-bottom: 10px;
+}
 div.podcast-embedder-previewContainer {
 	position: relative;
 	display: block;

@@ -35,7 +35,7 @@ class PodcastEmbedderService extends Component
             'parameters' => [],
 		]);
 
-		$this->{$info->providerName.'Format'}($info, $params);
+		$this->{strtolower($info->providerName).'Format'}($info, $params);
 		
 		return $info;
 	}
@@ -57,6 +57,46 @@ class PodcastEmbedderService extends Component
 		$url .= '?'.http_build_query($query);
 		unset($params['query']);
 
+		$params = array_merge([
+			'frameborder' => 0,
+			'allowTransparency' => 1,
+		], $params);
+		$paramString = '';
+		foreach ($params as $key => $param)
+		{
+			$paramString .= $key."='$param' ";
+		}
+		$iframe = "<iframe src='$url' $paramString></iframe>";
+
+		$info->embedUrl = $url;
+		$info->code = $iframe;
+	}
+
+	public function libsynFormat(&$info, $params=[])
+	{
+		//https://oembed.libsyn.com/embed?item_id=4737975
+		$url = $info->url;
+		preg_match('%(?:libsyn\.com\/embed\?item_id=)(.+)%i', $url, $match);
+		$info->id = $match[1];
+
+		$url = "//html5-player.libsyn.com/embed/episode/id/$info->id/";
+
+		$query = [
+			'height' => 90,
+			'theme' => 'custom',
+			'thumbnail' => 'yes',
+			'direction' => 'backwards',
+			'render-playlist' => 'no',
+		];
+		if (isset($params['query']) && is_array($params['query'])) {
+			$query = array_merge($query, $params['query']);
+		}
+		$url .= http_build_query($query);
+		$url = str_replace('&', '/', $url);
+		$url = str_replace('=', '/', $url);
+		unset($params['query']);
+
+		//html5-player.libsyn.com/embed/episode/id/4737975/height/90/theme/custom/thumbnail/yes/direction/backward/render-playlist/no/custom-color/87A93A/
 		$params = array_merge([
 			'frameborder' => 0,
 			'allowTransparency' => 1,
