@@ -2,7 +2,7 @@
 	"name": "kuriousagency/podcast-embedder",
 	"description": "Podcast fieldtype",
 	"type": "craft-plugin",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"keywords": [
 		"craft",
 		"cms",

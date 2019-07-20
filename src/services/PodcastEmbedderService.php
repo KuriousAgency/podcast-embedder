@@ -44,6 +44,9 @@ class PodcastEmbedderService extends Component
 	{
 		$url = $info->url;
 		preg_match('%(?:podbean.com\/media\/share\/pb-)(.+)%i', $url, $match);
+		if (!count($match)) {
+			return;
+		}
 		$info->id = $match[1];
 
 		$url = "https://www.podbean.com/media/player/$info->id-pb";
@@ -78,6 +81,9 @@ class PodcastEmbedderService extends Component
 		//https://oembed.libsyn.com/embed?item_id=4737975
 		$url = $info->url;
 		preg_match('%(?:libsyn\.com\/embed\?item_id=)(.+)%i', $url, $match);
+		if (!count($match)) {
+			return;
+		}
 		$info->id = $match[1];
 
 		$url = "//html5-player.libsyn.com/embed/episode/id/$info->id/";
