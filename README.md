@@ -2,8 +2,6 @@
 
 Creates a podcast fieldtype for the embed of Podbean or Libsyn podcast media players. A podcast can be embeded using a podcast's share url.
 
-![Logo](icon.svg)
-
 ## Requirements
 
 This plugin requires Craft CMS 3.0.0-beta.23 or later.
