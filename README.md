@@ -1,7 +1,6 @@
 # Podcast Embedder plugin for Craft CMS 3.x
 
-Podcast fieldtype
-
+Creates a podcast fieldtype for the embed of Podbean or Libsyn podcast media players. A podcast can be embeded using a podcast's share url.
 ![Screenshot](resources/img/plugin-logo.png)
 
 ## Requirements
@@ -18,26 +17,44 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
-        composer require /podcast-embedder
+        composer require kuriousagency/podcast-embedder
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Podcast Embedder.
 
 ## Podcast Embedder Overview
 
--Insert text here-
+Podcasts hosted on either the podbean or libsyn services can be embedded in templates using the podcast embedder fieldtype.
 
 ## Configuring Podcast Embedder
 
--Insert text here-
+Create a new field in Settings → Fields → New Field and select Podcast from the fieldtype dropdown.
 
 ## Using Podcast Embedder
 
--Insert text here-
+To add a podcast to templates add the following twig code:
+
+```
+{{ craft.podcastEmbedder.embed(podcast) }}
+```
+
+### Available Twig Functions ###
+
++ craft.podcastEmbedder.embed()
+
++ craft.podcastEmbedder.getEmbedUrl()
+
++ craft.podcastEmbedder.getThumbnail()
+
++ craft.podcastEmbedder.getTitle()
+
++ craft.podcastEmbedder.getDescription()
+
++ craft.podcastEmbedder.getType()
+
++ craft.podcastEmbedder.getPodcastId()
 
 ## Podcast Embedder Roadmap
 
-Some things to do, and ideas for potential features:
-
-* Release it
+* Add more providers
 
 Brought to you by [Kurious Agency](https://kurious.agency)
