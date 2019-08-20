@@ -1,7 +1,8 @@
 # Podcast Embedder plugin for Craft CMS 3.x
 
 Creates a podcast fieldtype for the embed of Podbean or Libsyn podcast media players. A podcast can be embeded using a podcast's share url.
-![Screenshot](resources/img/plugin-logo.png)
+
+![Logo](icon.svg)
 
 ## Requirements
 
